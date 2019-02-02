@@ -1,0 +1,23 @@
+{
+  "name": "unbroken-promises",
+  "version": "0.1.1-SNAPSHOT",
+  "license": "UNLICENSE",
+  "private": true,
+  "files": [
+    "src/*"
+  ],
+  "contributors": [
+    "Andrea Richiardi <andrea.richiardi@elasticpath.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://elasticpath.visualstudio.com/_git/laputa?path=%2Finterpreter&version=GBmaster"
+  },
+  "directories": {
+    "lib": "src"
+  },
+  "dependencies": {
+    "source-map-support": "0.5.10",
+    "ws": "6.1.3"
+  }
+}

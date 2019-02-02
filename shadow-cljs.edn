@@ -1,0 +1,5 @@
+{:deps {:aliases [:test :dev]}
+ :builds {:repl {:target :node-script
+                 :main unbroken-promises.repl/-main
+                 :output-to ".cljs/repl.js"
+                 :closure-defines {goog.DEBUG true}}}}
