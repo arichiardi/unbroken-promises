@@ -92,3 +92,4 @@ deploy: clean jar
       -DrepositoryId=clojars \
       -DpomFile=pom.xml \
       -Dfile=${jar_file}
+	git push --follow-tags
