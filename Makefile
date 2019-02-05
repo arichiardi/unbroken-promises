@@ -1,4 +1,3 @@
-IS_RELEASE ?= false
 MAJOR ?= 0
 MINOR ?= 1
 
@@ -42,10 +41,6 @@ current_version := ${MAJOR}.${MINOR}
 # compute the patch.
 tag_regex := ${tag_prefix}${current_version}.0
 
-ifeq (${IS_RELEASE}, false)
-  snapshot_string = -SNAPSHOT
-endif
-
 next_revision = $(shell ./scripts/git-revision --regex ${tag_regex})
 next_version := $(join ${current_version}, .${next_revision}${snapshot_string})
 next_tag := ${tag_prefix}${next_version}
@@ -86,8 +81,6 @@ jar: ${jar_file} ##@build Package the code in a jar file.
 prepare-release: ${next_version_file} ##@deploy Prepare a release - bump version, commit and tag.
 	lein change version set \"${next_version}\"
 	mvn -B versions:set -DgenerateBackupPoms=false -DnewVersion=${next_version}
-ifeq (${IS_RELEASE}, false)
 	git add project.clj pom.xml
 	git commit --gpg-sign --message "Release ${next_version}"
 	git tag -sa --message "Release ${next_tag}" ${next_tag}
-endif
