@@ -1,4 +1,4 @@
-(defproject testing "0.1.0"
+(defproject testing "0.1.1"
   :url "https://elasticpath.visualstudio.com/_git/laputa"
   :source-paths ["src"]
   :test-paths ["test"]
