@@ -13,7 +13,7 @@
 *.log
 .nrepl-port
 /.lumo[-_]cache/
-*.env
+*.old
 .nrepl-history
 .projectile
 /.cpcache
