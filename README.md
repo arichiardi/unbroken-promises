@@ -6,11 +6,11 @@ Promises.
 [![Clojars Project](https://img.shields.io/clojars/v/unbroken-promises.svg)](https://clojars.org/unbroken-promises)
 
 ```clojure
-[unbroken-promises "0.1.1"]
+[unbroken-promises "0.1.9"]
 ```
 
 ```clojure
-unbroken-promises {:mvn/version "0.1.1"}
+unbroken-promises {:mvn/version "0.1.9"}
 ```
 
 ### Readability and robustness
