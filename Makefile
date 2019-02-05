@@ -87,4 +87,8 @@ prepare-release: ##@deploy Prepare a release - bump version, commit and tag.
 	git tag -sa --message "Release ${next_tag}" ${next_tag}
 
 deploy: clean jar
-	clojure -A:deploy -m deps-deploy.deps-deploy deploy ${jar_file} true
+	mvn clean deploy:deploy-file \
+      -Durl=https://repo.clojars.org \
+      -DrepositoryId=clojars \
+      -DpomFile=pom.xml \
+      -Dfile=${jar_file}
