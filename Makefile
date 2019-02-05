@@ -46,7 +46,7 @@ next_version := $(join ${current_version}, .${next_revision}${snapshot_string})
 next_tag := ${tag_prefix}${next_version}
 
 clean: ##@dev Clean all the outputs.
-	rm -rf ${jar_file} extra
+	rm -rf ${jar_file} extra .cljs
 
 next-version: ##@dev Output the next computed version.
 	@echo ${next_version}
@@ -84,3 +84,6 @@ prepare-release: ${next_version_file} ##@deploy Prepare a release - bump version
 	git add project.clj pom.xml
 	git commit --gpg-sign --message "Release ${next_version}"
 	git tag -sa --message "Release ${next_tag}" ${next_tag}
+
+deploy: clean
+	mvn clean deploy
