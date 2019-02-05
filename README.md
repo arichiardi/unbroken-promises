@@ -3,6 +3,16 @@
 This is a library designed for easing up ClojureScript async testing of
 Promises.
 
+[![Clojars Project](https://img.shields.io/clojars/v/unbroken-promises.svg)](https://clojars.org/unbroken-promises)
+
+```clojure
+[unbroken-promises "0.1.1"]
+```
+
+```clojure
+unbroken-promises {:mvn/version "0.1.1"}
+```
+
 ### Readability and robustness
 
 Two macros have been designed for helping with the perilous task of
