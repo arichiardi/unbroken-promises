@@ -85,5 +85,5 @@ prepare-release: ${next_version_file} ##@deploy Prepare a release - bump version
 	git commit --gpg-sign --message "Release ${next_version}"
 	git tag -sa --message "Release ${next_tag}" ${next_tag}
 
-deploy: clean
-	mvn clean deploy
+deploy: clean jar
+	clojure -A:deploy -m deps-deploy.deps-deploy deploy ${jar_file} true
