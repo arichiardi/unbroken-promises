@@ -31,11 +31,11 @@ Testing `js/Promise` resolution at the moment reads:
         (.then done))))
 ```
 
-But thanks to `unbroken-promise.macro` it becomes:
+But thanks to `unbroken-promises.macro` it becomes:
 
 ```clojure
 (ns my-namespace-under-test
-  (:require [unbroken-promise.macro :as ubp :include-macros true]))
+  (:require [unbroken-promises :as ubp :include-macros true]))
 
 (deftest the-fetch-test
   (ubp/is-resolved [result (fetch "http:/foo.com/bar.json")]
@@ -46,7 +46,7 @@ But thanks to `unbroken-promise.macro` it becomes:
 Not only the former is arguably cleaner but it also correctly handles the case
 when the promise unexpectedly rejects, reporting it as testing error.
 
-Analogously, `unbroken-promise.macro/is-rejected` makes sure we correctly test
+Analogously, `unbroken-promises/is-rejected` makes sure we correctly test
 rejections:
 
 ```clojure
