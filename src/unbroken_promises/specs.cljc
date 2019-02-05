@@ -1,5 +1,5 @@
 (ns unbroken-promises.specs
-  (:require [clojure.spec.alpha :as s]))
+  (:require [cljs.spec.alpha :as s]))
 
 (s/def ::local-name (s/and simple-symbol? #(not= '& %)))
 

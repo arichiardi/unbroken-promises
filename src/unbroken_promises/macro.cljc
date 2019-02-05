@@ -1,6 +1,5 @@
 (ns unbroken-promises.macro
   (:require [cljs.test]
-            [cljs.spec.test.alpha]
             [unbroken-promises.data]
             #?@(:cljs [[goog.object]]))
   #?(:cljs (:require-macros [unbroken-promises.macro])))

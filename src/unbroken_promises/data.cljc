@@ -1,9 +1,6 @@
 (ns unbroken-promises.data
   (:require [clojure.string :as str]
-            [cljs.test :as test]
-            [cljs.spec.alpha :as s]
-            [cljs.spec.test.alpha :as stest]
-            [clojure.data :as data]))
+            [cljs.test :as test]))
 
 (defn format-contexts [contexts]
   (->> contexts
