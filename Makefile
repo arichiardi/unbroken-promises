@@ -78,11 +78,11 @@ ${jar_file}: deps.edn src/**/* extra/META-INF/pom.xml
 
 jar: ${jar_file} ##@build Package the code in a jar file.
 
-prepare-release: ${next_version_file} ##@deploy Prepare a release - bump version, commit and tag.
+prepare-release: ##@deploy Prepare a release - bump version, commit and tag.
 	sed -i.old 's/\"${current_version}.*\"/\"${next_version}\"/g' README.md
 	lein change version set \"${next_version}\"
 	mvn -B versions:set -DgenerateBackupPoms=false -DnewVersion=${next_version}
-	git add project.clj pom.xml
+	git add project.clj pom.xml README.md
 	git commit --gpg-sign --message "Release ${next_version}"
 	git tag -sa --message "Release ${next_tag}" ${next_tag}
 
