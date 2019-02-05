@@ -5,13 +5,24 @@
   <artifactId>unbroken-promises</artifactId>
   <version>0.1.9</version>
   <name>unbroken-promises</name>
-  <dependencies>
-    <dependency>
-      <groupId>org.clojure</groupId>
-      <artifactId>clojure</artifactId>
-      <version>1.10.0</version>
-    </dependency>
-  </dependencies>
+  <description>Tiny macro library designed for easing up ClojureScript Promise testing</description>
+  <url>https://github.com/arichiardi/unbroken-promises</url>
+  <scm>
+    <connection>scm:git:https://github.com/arichiardi/unbroken-promises</connection>
+    <url>https://github.com/arichiardi/unbroken-promises</url>
+    <tag>master</tag>
+  </scm>
+  <issueManagement>
+	<url>https://github.com/arichiardi/unbroken-promises/issues</url>
+	<system>GitHub Issues</system>
+  </issueManagement>
+  <licenses>
+    <license>
+	  <name>Unlicense</name>
+	  <url>https://unlicense.org</url>
+	  <distribution>repo</distribution>
+	</license>
+  </licenses>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
