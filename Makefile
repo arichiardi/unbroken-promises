@@ -60,9 +60,9 @@ ${next_version_file}:
 	@echo ${next_version} > ${next_version_file}
 
 ${shadow_pid_file}:
-	./scripts/repl
+	clojure -A:dev -m shadow.cljs.devtools.cli watch repl
 
-repl: ${shadow_pid_file} ##@dev Launch the REPL.
+watch: ${shadow_pid_file} ##@dev Launch the REPL.
 
 pom.xml: deps.edn
 	clojure -Srepro -Spom

@@ -3,7 +3,7 @@
                               org.clojure/clojurescript {:mvn/version "1.10.439"}
                               org.clojure/test.check {:mvn/version "0.10.0-alpha3" :exclusions [org.clojure/clojure]}
                               expound {:mvn/version "0.7.2"}
-                              thheller/shadow-cljs {:mvn/version "2.7.24"}}}
+                              thheller/shadow-cljs {:mvn/version "2.7.25"}}}
            :test {:extra-paths ["test"]
                   :extra-deps {olical/cljs-test-runner {:mvn/version "3.4.0"}}}
            :pack {:extra-deps {pack/pack.alpha {:git/url "https://github.com/juxt/pack.alpha.git"
